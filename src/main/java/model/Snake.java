@@ -21,7 +21,6 @@ public class Snake {
             snakeCordX[l] = snakeCordX[l-1];
             snakeCordY[l] = snakeCordY[l-1];
         }
-
         if(direction == 0) snakeCordY[0]--;  // движение вверх
         if(direction == 1) snakeCordX[0]++;  // движение вправо
         if(direction == 2) snakeCordY[0]++;  // движение вниз
