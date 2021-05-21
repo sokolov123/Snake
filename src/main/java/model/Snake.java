@@ -1,7 +1,8 @@
-import static java.awt.image.ImageObserver.HEIGHT;
+package model;
+
+import game.SnakeMain;
 
 public class Snake {
-
     public int length = 2;
     public int direction = 0;
 
@@ -31,7 +32,7 @@ public class Snake {
         if (snakeCordX[0] > SnakeMain.WIDTH - 1) snakeCordX[0] = 0; //делаю переходы
         if (snakeCordX[0] < 0) snakeCordX[0] = SnakeMain.WIDTH - 1;
 
-        if (snakeCordY[0] > SnakeMain.HEIGHT - 1) snakeCordY[0] = 0;
-        if (snakeCordY[0] < 0) snakeCordY[0] = SnakeMain.HEIGHT - 1;
+        if (snakeCordY[0] > SnakeMain.HEIGHT - 2) snakeCordY[0] = 0;
+        if (snakeCordY[0] < 0) snakeCordY[0] = SnakeMain.HEIGHT - 2;
     }
 }
