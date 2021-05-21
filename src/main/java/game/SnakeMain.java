@@ -57,7 +57,7 @@ public class SnakeMain extends JPanel implements ActionListener {
 
     public static void main(String[] args) {
         jFrame = new JFrame("Snake"); //заголовок окна
-        jFrame.setSize(SnakeMain.WIDTH*SnakeMain.SCALE+15, SnakeMain.HEIGHT*SnakeMain.SCALE+58);
+        jFrame.setSize(SnakeMain.WIDTH*SnakeMain.SCALE+15, SnakeMain.HEIGHT*SnakeMain.SCALE+8);
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //сворачивать при закрытии
         jFrame.setLocationRelativeTo(null); //будет размещаться по дефолту по середине
         jFrame.setResizable(false); //нельзя изменять размер окна
