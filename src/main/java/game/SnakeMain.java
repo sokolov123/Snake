@@ -22,6 +22,9 @@ public class SnakeMain extends JPanel implements ActionListener {
     public static final int SCALE = 30;
     public static int speed = 8;
 
+    public JTextArea textArea;
+    public static int score = 0;
+
     Snake s = new Snake(9, 20, 9, 19);
 
     Timer timer = new Timer(1000/speed, (ActionListener) this); // таймер
@@ -52,6 +55,12 @@ public class SnakeMain extends JPanel implements ActionListener {
 
         PaintSnake paintSnake = new PaintSnake(apple, SCALE, g, s);
         paintSnake.SnakePrinter();
+
+        jFrame.setResizable(false);
+        textArea = new JTextArea("Scores : " + score);
+        textArea.setEnabled(false);
+        textArea.setBounds(400, 400, 100, 100);
+        textArea.setBackground(Color.black);
     }
 
     public static void main(String[] args) {
@@ -61,16 +70,14 @@ public class SnakeMain extends JPanel implements ActionListener {
         jFrame.setLocationRelativeTo(null); //будет размещаться по дефолту по середине
         jFrame.setVisible(true); //окно видимое
         jFrame.setResizable(false); //нельзя изменять размер окна
-
         jFrame.add(new SnakeMain()); //добавляю отрисовщик чтобы он собственно рисовал
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
         s.move();
 
-        EatApple eatApple = new EatApple(s, apple, s.length);
+        EatApple eatApple = new EatApple(s, apple, s.length, score);
         eatApple.Eat();
 
         for (int l = 1; l< s.length; l++) { //рисую саму змеюку
@@ -78,7 +85,7 @@ public class SnakeMain extends JPanel implements ActionListener {
                 apple.positionApple();
             }
             if (s.snakeCordX[0] == s.snakeCordX[l] && s.snakeCordY[0] == s.snakeCordY[l]) {
-                GameOver gameOver = new GameOver(jFrame,timer,s,apple);
+                GameOver gameOver = new GameOver(jFrame,timer,s,apple, score);
                 gameOver.diedSnake();
 
             }

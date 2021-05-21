@@ -10,11 +10,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class EatAppleTest {
     private Apple apple;
     private Snake s;
+    private int score;
 
     @Test
     void Eat() {
         int length=100;
-        EatApple eatApple = new EatApple(s, apple, length);
+        EatApple eatApple = new EatApple(s, apple, length, score);
         eatApple.eatApple();
         assertEquals(101,eatApple.getLength());
         eatApple.eatApple();

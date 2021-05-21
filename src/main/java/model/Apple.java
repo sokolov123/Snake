@@ -31,7 +31,5 @@ public class Apple {
     public void positionApple() {
         positionX = Math.abs((int) (Math.random()* SnakeMain.WIDTH - 1));
         positionY = Math.abs((int) (Math.random()* SnakeMain.HEIGHT - 1));
-
     }
-
 }
