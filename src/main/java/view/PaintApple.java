@@ -21,5 +21,4 @@ public class PaintApple {
         g.setColor(Color.red); // яблоко надо было отрисовыввать чуть раньше змейки
         g.fillOval(apple.positionX * SCALE + 5, apple.positionY * SCALE + 5, SCALE - 7, SCALE - 7);
     }
-
 }

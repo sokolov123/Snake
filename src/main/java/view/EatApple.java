@@ -29,7 +29,6 @@ public class EatApple {
     public int getLength() {
         return length;
     }
-
     public void setLength(int length) {
         this.length = length;
     }
@@ -38,10 +37,10 @@ public class EatApple {
         return length++;
     }
 
+
     public int getScore() {
         return score;
     }
-
     public void setScore(int score) {
         this.score = score;
     }

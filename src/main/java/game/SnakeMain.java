@@ -21,7 +21,6 @@ public class SnakeMain extends JPanel implements ActionListener {
     public static final int HEIGHT = 35;
     public static final int SCALE = 30;
     public static int speed = 8;
-
     public static int score = 0;
 
     Snake s = new Snake(9, 20, 9, 19);
@@ -54,17 +53,16 @@ public class SnakeMain extends JPanel implements ActionListener {
 
         PaintSnake paintSnake = new PaintSnake(apple, SCALE, g, s);
         paintSnake.SnakePrinter();
-
     }
 
     public static void main(String[] args) {
         jFrame = new JFrame("Snake"); //заголовок окна
-        jFrame.setSize(SnakeMain.WIDTH*SnakeMain.SCALE+15, SnakeMain.HEIGHT*SnakeMain.SCALE+8);
+        jFrame.setSize(SnakeMain.WIDTH*SnakeMain.SCALE+15, SnakeMain.HEIGHT*SnakeMain.SCALE+58);
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE); //сворачивать при закрытии
         jFrame.setLocationRelativeTo(null); //будет размещаться по дефолту по середине
-        jFrame.setVisible(true); //окно видимое
         jFrame.setResizable(false); //нельзя изменять размер окна
         jFrame.add(new SnakeMain()); //добавляю отрисовщик чтобы он собственно рисовал
+        jFrame.setVisible(true); //окно видимое
     }
 
     @Override
@@ -84,8 +82,6 @@ public class SnakeMain extends JPanel implements ActionListener {
 
             }
         }
-
         repaint();
     }
-
 }

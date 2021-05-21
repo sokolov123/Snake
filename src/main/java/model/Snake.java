@@ -17,7 +17,6 @@ public class Snake {
     }
 
     public void move() {
-
         for (int l = length; l > 0; l--) { // делаю штобы остальная змейка шла за головой
             snakeCordX[l] = snakeCordX[l-1];
             snakeCordY[l] = snakeCordY[l-1];
@@ -27,7 +26,6 @@ public class Snake {
         if(direction == 1) snakeCordX[0]++;  // движение вправо
         if(direction == 2) snakeCordY[0]++;  // движение вниз
         if(direction == 3) snakeCordX[0]--;  // движение влево
-
 
         if (snakeCordX[0] > SnakeMain.WIDTH - 1) snakeCordX[0] = 0; //делаю переходы
         if (snakeCordX[0] < 0) snakeCordX[0] = SnakeMain.WIDTH - 1;
