@@ -22,7 +22,6 @@ public class SnakeMain extends JPanel implements ActionListener {
     public static final int SCALE = 30;
     public static int speed = 8;
 
-    public JTextArea textArea;
     public static int score = 0;
 
     Snake s = new Snake(9, 20, 9, 19);
@@ -56,11 +55,6 @@ public class SnakeMain extends JPanel implements ActionListener {
         PaintSnake paintSnake = new PaintSnake(apple, SCALE, g, s);
         paintSnake.SnakePrinter();
 
-        jFrame.setResizable(false);
-        textArea = new JTextArea("Scores : " + score);
-        textArea.setEnabled(false);
-        textArea.setBounds(400, 400, 100, 100);
-        textArea.setBackground(Color.black);
     }
 
     public static void main(String[] args) {

@@ -25,6 +25,7 @@ public class GameOver extends JFrame{
     public void diedSnake(){
         timer.stop();
         JOptionPane.showMessageDialog(null, "Game Over, noob \nYour score = " + score);
+        JOptionPane.showMessageDialog(null, "New Game?");
         jFrame.setVisible(false); //небольшой кусочек который сделает так что окно моргнет, и занулятся данные
         s.length = 2;
         s.direction = 0;
